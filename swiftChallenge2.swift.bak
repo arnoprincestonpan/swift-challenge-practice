@@ -1,0 +1,24 @@
+// Reverse a String
+func reverseString(someString: String) -> String {
+    var reversedString = ""
+    
+    for char in someString{
+        reversedString = String(char) + reversedString
+    }
+    
+    return reversedString
+}
+
+let name = "Georgia"
+
+print(reverseString(someString: name))
+
+// Reverse a String
+func reverseString2(someString: String) -> String {
+    var charArray = Array(someString)
+    var reversedArray : [Character] = []
+    for _ in charArray {
+        reversedArray.append(charArray.removeLast())
+    }
+    return String(reversedArray)
+}
