@@ -121,6 +121,21 @@ let averageSales = revenueByQuarter.reduce(0, {x, y in x + y}) / revenueByQuarte
 print(averageSales)
 
 
+// Sets
+
+var repeatItemArray : [Any] = ["Arno", "Arno", "Arno", 1, 1, 1, "Eddie", "Eddie", "Eddie"]
+var someSet = Set<String>()
+print(repeatItemArray)
+print(someSet)
+someSet.insert("Arno")
+
+let someNumbers: Set = Set(Array(1...25))
+print(someNumbers)
+// for some reason it always prints empty on line 140 here
+let someEvenNumbers = Set(stride(from: 2, to: 24, by: 2))
+print(someEvenNumbers)
+
+
 // Dictionary
 
 var rgbColorDict : [String: String] = [:]
