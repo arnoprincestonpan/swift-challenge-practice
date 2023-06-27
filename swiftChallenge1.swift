@@ -6,3 +6,9 @@ func singleOrPlural(someString : String) -> Bool{
     return false
 }
 
+
+func singleOrPlural2(someString: String) -> Bool{
+    return someString.lowercased().hasSuffix("s")
+}
+
+print(singleOrPlural2(someString: "kitties"))
