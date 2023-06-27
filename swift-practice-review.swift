@@ -121,3 +121,19 @@ let averageSales = revenueByQuarter.reduce(0, {x, y in x + y}) / revenueByQuarte
 print(averageSales)
 
 
+// Dictionary
+
+var rgbColorDict : [String: String] = [:]
+rgbColorDict["red"] = "255-0-0"
+rgbColorDict["blue"] = "0-0-255"
+rgbColorDict["yellow"] = "255-255-0"
+print(rgbColorDict)
+
+var storageCount : [String : Int] = ["pencils" : 1, "erasers" : 1, "paper" : 1]
+storageCount.updateValue(5, forKey: "pencils")
+print(storageCount)
+
+var someListNames = ["Arno", "James", "Judy", "Frank", "Mary", "Catherine", "Belle", "Zoey", "Cristy", "Beatrice", "Aaron"]
+var someNamesDict = Dictionary(grouping: someListNames){ $0.first! }
+print("someListNames: \(someListNames)")
+print("Dictionary: \(someNamesDict)")
