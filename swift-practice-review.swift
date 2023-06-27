@@ -112,5 +112,12 @@ print(squareNumbers)
 
 var numberOfItemsInBox = Array(repeating: 0, count: 10)
 print(numberOfItemsInBox)
+numberOfItemsInBox[0...2] = numberOfItemsInBox[0...2].map{$0 + 1}[...]
+print(numberOfItemsInBox)
+
+var revenueByQuarter = [6969, 12345, 54321, 1111]
+let averageSales = revenueByQuarter.reduce(0, {x, y in x + y}) / revenueByQuarter.count
+// let averageSales = revenueByQuarter.reduce(0, +) / revenueByQuarter.count
+print(averageSales)
 
 
