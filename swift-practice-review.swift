@@ -233,3 +233,21 @@ let arno = Person(name: "Arno", age: 29)
 print(arno.sayHello())
 print(arno.celebrateBirthday())
 print(arno.sayHello())
+
+
+// Enum
+
+enum DaysofaWeek{
+    case Sunday
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+}
+
+var day = DaysofaWeek.Sunday
+print(day)
+day = .Tuesday
+print(day)
