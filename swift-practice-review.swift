@@ -171,3 +171,38 @@ print(ascending)
 let someAddition : (Int, Int) -> Int
 someAddition = { $0 + $1 }
 print(someAddition(100, 200))
+
+
+// Struct
+
+struct Circle {
+    // pi * r^2
+    var radius : Double // stored property
+    var area : Double { // computed property
+        return Double.pi * radius * radius
+    }
+}
+
+let someCircle = Circle(radius: 6.0)
+print(someCircle.radius)
+print(String(format: "%.2f", someCircle.area))
+
+struct Counter {
+    var count : Int
+    mutating func increment() {
+        count += 1
+    }
+    mutating func reset() {
+        count = 0
+    }
+    func show() -> Int{
+        return count
+    }
+}
+
+var firstCount = Counter(count: 0)
+print(firstCount.show())
+firstCount.increment()
+print(firstCount.show())
+firstCount.reset()
+print(firstCount.count)
