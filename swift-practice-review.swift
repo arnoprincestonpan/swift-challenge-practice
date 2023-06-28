@@ -206,3 +206,30 @@ firstCount.increment()
 print(firstCount.show())
 firstCount.reset()
 print(firstCount.count)
+
+
+// Classes
+
+class Person {
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int){
+        self.name = name
+        self.age = age
+    }
+    
+    func sayHello(){
+        print("Hello, my name is \(name) and I'm \(age) years old.")
+    }
+    
+    func celebrateBirthday(){
+        self.age += 1
+        print("Today is my birthday, I am now \(self.age) years old.")
+    }
+}
+
+let arno = Person(name: "Arno", age: 29)
+print(arno.sayHello())
+print(arno.celebrateBirthday())
+print(arno.sayHello())
