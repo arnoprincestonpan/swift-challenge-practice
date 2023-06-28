@@ -152,3 +152,22 @@ var someListNames = ["Arno", "James", "Judy", "Frank", "Mary", "Catherine", "Bel
 var someNamesDict = Dictionary(grouping: someListNames){ $0.first! }
 print("someListNames: \(someListNames)")
 print("Dictionary: \(someNamesDict)")
+
+
+// Closures
+
+let makeMeCapital = { (someString : String) -> String in
+    return someString.uppercased()
+}
+
+print(makeMeCapital("arno"))
+var twentyFiveCount : [Int] = [1, 5, 3, 4, 9, 7, 0, 8]
+print(twentyFiveCount)
+let descending = twentyFiveCount.sorted(by: { n1, n2 in n1 > n2 })
+let ascending = twentyFiveCount.sorted(by: { n1, n2 in n1 < n2 })
+print(descending)
+print(ascending)
+
+let someAddition : (Int, Int) -> Int
+someAddition = { $0 + $1 }
+print(someAddition(100, 200))
